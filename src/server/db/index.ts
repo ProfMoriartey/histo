@@ -16,3 +16,13 @@ const conn = globalForDb.conn ?? postgres(env.DATABASE_URL);
 if (env.NODE_ENV !== "production") globalForDb.conn = conn;
 
 export const db = drizzle(conn, { schema });
+
+
+// AI version
+
+// import { drizzle } from "drizzle-orm/node-postgres";
+// import { Pool } from "pg";
+// import * as schema from "./schema";
+
+// const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+// export const db = drizzle(pool, { schema });
